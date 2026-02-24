@@ -1,6 +1,6 @@
 import fs from "fs";
 
-const TOKEN = "8242718121:AAFfzGw5fV3waXS2-PG3aoSULq9LBcMUl5U";
+const TOKEN = "8242718121:AAFTjggE_5Ai1qD0BmSw8q56h7cB4BHigiA";
 
 export default async function handler(req, res) {
   if (req.method !== "POST") {
@@ -46,4 +46,5 @@ async function sendMessage(chatId, text) {
       text: text
     })
   });
+
 }
