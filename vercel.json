@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/*.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/addkey",
+      "dest": "/api/addkey.js"
+    },
+    {
+      "src": "/api/bot",
+      "dest": "/api/bot.js"
+    },
+    {
+      "src": "/api/cekusr",
+      "dest": "/api/cekusr.js"
+    },
+    {
+      "src": "/api/listkeys",
+      "dest": "/api/listkeys.js"
+    },
+    {
+      "src": "/api/removekey",
+      "dest": "/api/removekey.js"
+    },
+    {
+      "src": "/api/validate",
+      "dest": "/api/validate.js"
+    }
+  ],
+  "env": {
+    "BOT_TOKEN": "@bot-token",
+    "ADMIN_ID": "@admin-id",
+    "ADMIN_CHAT_ID": "@admin-chat-id",
+    "VERCEL_URL": "@vercel-url"
+  },
+  "regions": ["sin1"],
+  "functions": {
+    "api/*.js": {
+      "maxDuration": 10
+    }
+  }
+}
